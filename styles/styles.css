@@ -35,6 +35,16 @@ body button {
   color: #fff;
 }
 
+body button > .lock-icon {
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-right: 6px;
+  background-image: url("../assets/lock.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,11 +129,11 @@ main form {
 }
 
 main form > .signup-field {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 main form > .signup-field > label {
-  line-height: 25px;
+  line-height: 40px;
   margin-bottom: 6px;
 }
 
@@ -145,6 +155,20 @@ main form > .signup-field > span {
   font-size: 1rem;
   line-height: 2.5em;
   padding: 5px 0 0;
+}
+
+main form button {
+  font-size: 1.6rem;
+  line-height: 34px;
+  border: none;
+  width: 100%;
+  padding: 6px 12px;
+  margin-bottom: 30px;
+}
+
+main form button > .lock-icon {
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 aside {
