@@ -30,9 +30,14 @@ body button {
   padding: 10px 20px;
   background-color: #0077cf;
   border-radius: 4px;
-  border: 1px solid #000;
+  border: 1px solid #4c4c4c;
   font-size: 1.35rem;
   color: #fff;
+}
+
+body button:hover {
+  -webkit-filter: brightness(1.03);
+          filter: brightness(1.03);
 }
 
 body button > .lock-icon {
@@ -144,6 +149,16 @@ main form > .signup-field > .input-wrapper {
   border-radius: 3px;
 }
 
+main form > .signup-field > .input-wrapper:focus {
+  border: 1px solid #52A8EC;
+  -webkit-box-shadow: 0 1px 1px #FFF inset, 0 0 8px #52A8EC;
+  box-shadow: 0 1px 1px #FFF inset, 0 0 8px #52A8EC;
+  outline: 0 none;
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
 main form > .signup-field > .input-wrapper > input {
   border: none;
   outline: none;
@@ -169,6 +184,19 @@ main form button {
 main form button > .lock-icon {
   width: 1.3rem;
   height: 1.3rem;
+}
+
+main p {
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #727272;
+  line-height: 1.5em;
+  width: 100%;
+}
+
+main p > a {
+  color: #0077cf;
 }
 
 aside {
