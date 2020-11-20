@@ -22,7 +22,6 @@ body {
   font-size: 1.4rem;
   width: 100%;
   height: 100%;
-  padding: 10px 30px;
   background: #eceef1;
 }
 
@@ -61,6 +60,7 @@ header {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 100%;
+  padding: 10px 30px;
   font-size: 1.2rem;
 }
 
@@ -84,7 +84,59 @@ header a {
   color: #0077c5;
 }
 
-main {
+.logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logos .intuit-logo {
+  margin: 20px 0;
+  width: 118px;
+  height: 35px;
+  background-image: url(../assets/intuitAssetPack.png);
+}
+
+.logos .smaller-logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.logos .smaller-logos > .mint-logo {
+  width: 68px;
+  height: 25px;
+  background-image: url(../assets/intuitAssetPack.png);
+  background-position: 310px 27px;
+}
+
+.logos .smaller-logos > .quickbooks-logo {
+  width: 128px;
+  height: 25px;
+  background-image: url(../assets/intuitAssetPack.png);
+  background-position: 448px 27px;
+  margin: 0 9px;
+}
+
+.logos .smaller-logos > .turbotax-logo {
+  width: 103px;
+  height: 25px;
+  background-image: url(../assets/intuitAssetPack.png);
+  background-position: 562px 27px;
+}
+
+.form-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,26 +156,26 @@ main {
   border-radius: 2px;
 }
 
-main h1 {
+.form-container h1 {
   font-size: 2.4rem;
   text-align: center;
 }
 
-main h2 {
+.form-container h2 {
   font-size: 1.4rem;
   text-align: center;
   margin: 20px 0;
   line-height: 1.3em;
 }
 
-main h2 > a {
+.form-container h2 > a {
   font-size: 1.2rem;
   text-align: center;
   text-decoration: none;
   color: #0077c5;
 }
 
-main form {
+.form-container form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,25 +183,26 @@ main form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
-main form > .signup-field {
+.form-container form > .signup-field {
   margin-bottom: 25px;
 }
 
-main form > .signup-field > label {
+.form-container form > .signup-field > label {
   line-height: 40px;
   margin-bottom: 6px;
 }
 
-main form > .signup-field > .input-wrapper {
+.form-container form > .signup-field > .input-wrapper {
   width: 100%;
   padding: 4px;
   border: 1px solid #c7c7c7;
   border-radius: 3px;
 }
 
-main form > .signup-field > .input-wrapper:focus {
+.form-container form > .signup-field > .input-wrapper:focus {
   border: 1px solid #52A8EC;
   -webkit-box-shadow: 0 1px 1px #FFF inset, 0 0 8px #52A8EC;
   box-shadow: 0 1px 1px #FFF inset, 0 0 8px #52A8EC;
@@ -159,20 +212,20 @@ main form > .signup-field > .input-wrapper:focus {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
-main form > .signup-field > .input-wrapper > input {
+.form-container form > .signup-field > .input-wrapper > input {
   border: none;
   outline: none;
   width: 100%;
   font-size: 1.62rem;
 }
 
-main form > .signup-field > span {
+.form-container form > .signup-field > span {
   font-size: 1rem;
   line-height: 2.5em;
   padding: 5px 0 0;
 }
 
-main form button {
+.form-container form button {
   font-size: 1.6rem;
   line-height: 34px;
   border: none;
@@ -181,12 +234,12 @@ main form button {
   margin-bottom: 30px;
 }
 
-main form button > .lock-icon {
+.form-container form button > .lock-icon {
   width: 1.3rem;
   height: 1.3rem;
 }
 
-main p {
+.form-container p {
   font-style: italic;
   font-size: 1.2rem;
   text-align: center;
@@ -195,11 +248,11 @@ main p {
   width: 100%;
 }
 
-main p > a {
+.form-container p > a {
   color: #0077c5;
 }
 
-main p.recaptcha {
+.form-container p.recaptcha {
   font-style: normal;
   font-size: 1rem;
   line-height: 2em;

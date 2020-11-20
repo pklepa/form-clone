@@ -25,7 +25,6 @@ body
 
     width: 100%
     height: 100%
-    padding: 10px 30px
     background: $background
 
     button
@@ -55,6 +54,7 @@ header
     align-items: center
     justify-content: flex-end
     width: 100%
+    padding: 10px 30px
 
     font-size: 1.2rem
 
@@ -70,7 +70,43 @@ header
         text-decoration: none
         color: $blue
 
-main
+.logos
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .intuit-logo
+        margin: 20px 0
+        width: 118px
+        height: 35px
+        background-image: url(../assets/intuitAssetPack.png)
+
+    .smaller-logos
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+
+        & > .mint-logo
+            width: 68px
+            height: 25px
+            background-image: url(../assets/intuitAssetPack.png)
+            background-position: 310px 27px
+
+        & > .quickbooks-logo
+            width: 128px
+            height: 25px
+            background-image: url(../assets/intuitAssetPack.png)
+            background-position: 448px 27px
+
+            margin: 0 9px
+
+        & > .turbotax-logo
+            width: 103px
+            height: 25px
+            background-image: url(../assets/intuitAssetPack.png)
+            background-position: 562px 27px
+
+.form-container
     display: flex
     flex-direction: column
     align-items: center
@@ -102,6 +138,7 @@ main
     form
         display: flex
         flex-direction: column
+        width: 100%
 
         & > .signup-field
             margin-bottom: 25px
