@@ -141,6 +141,9 @@ header
         width: 100%
 
         & > .signup-field
+            display: flex
+            flex-direction: column
+            width: 100%
             margin-bottom: 25px
 
             & > label
@@ -148,7 +151,6 @@ header
                 margin-bottom: 6px
 
             & > input, .password-wrapper > input
-                width: 100%
                 padding: 6px
                 font-size: 1.62rem
 
@@ -167,11 +169,16 @@ header
 
             & > .password-wrapper
                 position: relative
+                width: 100%
+
+                & > input
+                    width: 100%
+                    box-sizing: border-box
 
             & > .password-wrapper::after
                 position: absolute
                 z-index: 2
-                right: -1px
+                right: 12px
                 top: 6px
                 content: " "
                 height: 20px

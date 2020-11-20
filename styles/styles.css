@@ -187,6 +187,14 @@ header a {
 }
 
 .form-container form > .signup-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
   margin-bottom: 25px;
 }
 
@@ -196,7 +204,6 @@ header a {
 }
 
 .form-container form > .signup-field > input, .form-container form > .signup-field .password-wrapper > input {
-  width: 100%;
   padding: 6px;
   font-size: 1.62rem;
   outline: none;
@@ -216,12 +223,19 @@ header a {
 
 .form-container form > .signup-field > .password-wrapper {
   position: relative;
+  width: 100%;
+}
+
+.form-container form > .signup-field > .password-wrapper > input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .form-container form > .signup-field > .password-wrapper::after {
   position: absolute;
   z-index: 2;
-  right: -1px;
+  right: 12px;
   top: 6px;
   content: " ";
   height: 20px;
