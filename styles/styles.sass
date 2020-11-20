@@ -147,10 +147,12 @@ header
                 line-height: 40px
                 margin-bottom: 6px
 
-            & > .input-wrapper
+            & > input, .password-wrapper > input
                 width: 100%
-                padding: 4px
+                padding: 6px
+                font-size: 1.62rem
 
+                outline: none
                 border: 1px solid #c7c7c7
                 border-radius: 3px
 
@@ -163,11 +165,20 @@ header
                     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6)
                     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6)
 
-                & > input
-                    border: none
-                    outline: none
-                    width: 100%
-                    font-size: 1.62rem
+            & > .password-wrapper
+                position: relative
+
+            & > .password-wrapper::after
+                position: absolute
+                z-index: 2
+                right: -1px
+                top: 6px
+                content: " "
+                height: 20px
+                width: 20px
+                background-image: url(../assets/password-lock.png)
+                background-size: contain
+                background-repeat: no-repeat
 
             & > span
                 font-size: 1rem

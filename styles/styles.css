@@ -195,14 +195,16 @@ header a {
   margin-bottom: 6px;
 }
 
-.form-container form > .signup-field > .input-wrapper {
+.form-container form > .signup-field > input, .form-container form > .signup-field .password-wrapper > input {
   width: 100%;
-  padding: 4px;
+  padding: 6px;
+  font-size: 1.62rem;
+  outline: none;
   border: 1px solid #c7c7c7;
   border-radius: 3px;
 }
 
-.form-container form > .signup-field > .input-wrapper:focus {
+.form-container form > .signup-field > input:focus, .form-container form > .signup-field .password-wrapper > input:focus {
   border: 1px solid #52A8EC;
   -webkit-box-shadow: 0 1px 1px #FFF inset, 0 0 8px #52A8EC;
   box-shadow: 0 1px 1px #FFF inset, 0 0 8px #52A8EC;
@@ -212,11 +214,21 @@ header a {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
-.form-container form > .signup-field > .input-wrapper > input {
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 1.62rem;
+.form-container form > .signup-field > .password-wrapper {
+  position: relative;
+}
+
+.form-container form > .signup-field > .password-wrapper::after {
+  position: absolute;
+  z-index: 2;
+  right: -1px;
+  top: 6px;
+  content: " ";
+  height: 20px;
+  width: 20px;
+  background-image: url(../assets/password-lock.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .form-container form > .signup-field > span {
